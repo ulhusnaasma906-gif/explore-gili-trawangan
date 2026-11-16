@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eee8dc">
+  <title>Explore Gili Trawangan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#" class="brand" id="logoHome">
+    <span class="turtle-logo">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M21 25 13 18 8 20 12 32 21 34 M43 25 51 18 56 20 52 32 43 34 M22 42 16 49 19 54 29 46 M42 42 48 49 45 54 35 46" fill="currentColor"/>
+        <ellipse cx="32" cy="33" rx="17" ry="14" fill="currentColor"/>
+        <path d="M21 29 Q32 15 43 29 L43 37 Q32 50 21 37Z" fill="none" stroke="#f5f1e8" stroke-width="2"/>
+        <path d="M32 20 V46 M21 33 H43" stroke="#f5f1e8" stroke-width="1.5"/>
+        <circle cx="32" cy="13" r="6" fill="currentColor"/>
+        <circle cx="30" cy="12" r="1" fill="#fff"/>
+      </svg>
+    </span>
+    <span>EXPLORE <b>GILI</b><small>TRAWANGAN · INDONESIA</small></span>
+  </a>
+
+  <nav class="main-nav">
+    <button class="nav-link active" data-page="homePage">Beranda</button>
+    <button class="nav-link" data-page="aboutPage">Tentang Pulau</button>
+    <button class="nav-link" data-page="activitiesPage">Aktivitas</button>
+    <button class="nav-link" data-page="galleryPage">Galeri</button>
+    <button class="nav-link" data-page="locationPage">Lokasi</button>
+    <button class="nav-link" data-page="bookingPage">Pemesanan</button>
+  </nav>
+
+  <div class="header-tools">
+    <div class="language-wrap">
+      <i class="fa-solid fa-globe"></i>
+      <select id="languageSelect" aria-label="Pilih bahasa">
+        <option value="id">ID</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <button class="sound-button" id="soundButton" title="Nyalakan musik" aria-label="Musik">
+      <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+    </button>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Buka menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<audio id="backgroundMusic" loop preload="none">
+  <source src="assets/Audio/audio1.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+
+  <!-- BERANDA -->
+  <section class="page active" id="homePage">
+    <div class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/Video/video1.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">NORTH LOMBOK · INDONESIA</p>
+        <h1>Discover the Beauty<br>of <span>Gili Trawangan</span></h1>
+        <p>Jelajahi pesona pulau tropis dengan laut biru jernih, pantai berpasir putih, kehidupan bawah laut, dan pemandangan matahari terbenam yang memukau.</p>
+        <button class="gold-button" data-go="activitiesPage">Jelajahi Wisata <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="hero-bottom">
+        <span>01 / 06</span>
+        <span>THE ISLAND EXPERIENCE</span>
+        <span class="scroll-indicator"><i class="fa-solid fa-arrow-down"></i> EXPLORE</span>
+      </div>
+    </div>
+
+    <div class="intro-strip">
+      <span>ISLAND</span><i class="fa-solid fa-star-of-life"></i>
+      <span>OCEAN</span><i class="fa-solid fa-star-of-life"></i>
+      <span>ADVENTURE</span><i class="fa-solid fa-star-of-life"></i>
+      <span>PARADISE</span>
+    </div>
+
+    <section class="section home-intro">
+      <div class="section-heading">
+        <p class="eyebrow">WELCOME TO PARADISE</p>
+        <h2>Temukan Pesona Gili Trawangan</h2>
+        <p>Sebuah perjalanan untuk menikmati keindahan alam, suasana pulau, dan pengalaman wisata yang berkesan.</p>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-image">
+          <img src="assets/Foto/foto1.jpg" alt="Pemandangan pantai tropis">
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">A LITTLE PIECE OF PARADISE</p>
+          <h3>Keindahan yang Menunggu untuk Dijelajahi</h3>
+          <p>Gili Trawangan merupakan salah satu destinasi wisata bahari di Kabupaten Lombok Utara, Nusa Tenggara Barat. Pulau ini dikenal dengan pantai yang indah, air laut yang jernih, dan beragam kegiatan wisata.</p>
+          <p>Mulai dari snorkeling, bersepeda mengelilingi pulau, menikmati suasana penginapan, hingga menyaksikan matahari terbenam. Setiap sudutnya menawarkan pengalaman yang berbeda.</p>
+          <button class="text-link" data-go="aboutPage">Kenali pulau ini <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AKTIVITAS BERANDA: 6 KARTU -->
+    <section class="section home-activities">
+      <div class="section-heading">
+        <p class="eyebrow">DISCOVER THE ISLAND</p>
+        <h2>Pengalaman di Gili</h2>
+        <p>Pilih aktivitas yang ingin kamu jelajahi lebih jauh.</p>
+      </div>
+
+      <div class="activity-grid">
+        <button class="activity-card" data-activity="snorkeling">
+          <img src="assets/Foto/foto13.jpg" alt="Snorkeling">
+          <span class="activity-number">01</span>
+          <div class="card-content">
+            <small>UNDERWATER ADVENTURE</small>
+            <h3>Snorkeling</h3>
+            <span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </button>
+
+        <button class="activity-card" data-activity="cycling">
+          <img src="assets/Foto/foto6.jpg" alt="Bersepeda">
+          <span class="activity-number">02</span>
+          <div class="card-content">
+            <small>ISLAND RIDE</small>
+            <h3>Bersepeda</h3>
+            <span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </button>
+
+        <button class="activity-card" data-activity="stay">
+          <img src="assets/Foto/foto16.jpg" alt="Penginapan">
+          <span class="activity-number">03</span>
+          <div class="card-content">
+            <small>STAY & RELAX</small>
+            <h3>Penginapan</h3>
+            <span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </button>
+
+        <button class="activity-card" data-activity="sunset">
+          <img src="assets/Foto/foto8.jpg" alt="Sunset">
+          <span class="activity-number">04</span>
+          <div class="card-content">
+            <small>GOLDEN HOUR</small>
+            <h3>Menikmati Sunset</h3>
+            <span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </button>
+
+        <button class="activity-card" data-activity="horse">
+          <img src="assets/Foto/foto17.jpg" alt="Berkuda">
+          <span class="activity-number">05</span>
+          <div class="card-content">
+            <small>BEACH HORSE RIDING</small>
+            <h3>Berkuda</h3>
+            <span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </button>
+
+        <button class="activity-card" data-activity="paddle">
+          <img src="assets/Foto/foto11.jpeg" alt="Paddleboarding">
+          <span class="activity-number">06</span>
+          <div class="card-content">
+            <small>OCEAN ADVENTURE</small>
+            <h3>Paddleboarding</h3>
+            <span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section class="section home-gallery">
+      <div class="section-heading">
+        <p class="eyebrow">CAPTURE THE MOMENT</p>
+        <h2>Sepotong Keindahan Pulau</h2>
+        <p>Beberapa gambaran suasana Gili Trawangan.</p>
+      </div>
+      <div class="home-gallery-grid">
+        <button class="gallery-preview" data-lightbox="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1400" data-caption="Keindahan pantai dan laut">
+          <img src="assets/Foto/foto21.jpg" alt="Pantai dan laut">
+          <span><i class="fa-solid fa-expand"></i></span>
+        </button>
+        <button class="gallery-preview" data-lightbox="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1400" data-caption="Suasana matahari terbenam">
+          <img src="assets/Foto/foto12.jpg" alt="Matahari terbenam">
+          <span><i class="fa-solid fa-expand"></i></span>
+        </button>
+        <div class="gallery-video-preview">
+          <video controls playsinline poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900">
+            <source src="assets/Video/video2.mp4" type="video/mp4">
+          </video>
+          <span class="video-caption"><i class="fa-solid fa-circle-play"></i> Video suasana Gili Trawangan</span>
+        </div>
+      </div>
+      <div class="center-action">
+        <button class="gold-button" data-go="galleryPage">Lihat Selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
+
+    <section class="section home-location">
+      <div class="location-content">
+        <div class="location-copy">
+          <p class="eyebrow">LOKASI WISATA</p>
+          <h2>Temukan Gili Trawangan</h2>
+          <p>Lihat lokasi Gili Trawangan dan temukan informasi mengenai letak pulau serta akses menuju kawasan wisata.</p>
+          <button class="gold-button" data-go="locationPage">Lihat Lokasi <i class="fa-solid fa-location-dot"></i></button>
+        </div>
+        <div class="home-location-image">
+          <iframe title="Peta lokasi Gili Trawangan" src="https://www.google.com/maps?q=Gili%20Trawangan&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-banner">
+      <p class="eyebrow">YOUR ISLAND ESCAPE</p>
+      <h2>Biarkan Laut<br>Menceritakan Kisahnya.</h2>
+      <button class="light-button" data-go="bookingPage">Rencanakan Perjalanan</button>
+    </section>
+  </section>
+
+  <!-- TENTANG PULAU -->
+  <section class="page" id="aboutPage" hidden>
+    <div class="page-heading">
+      <button class="back-button" data-back aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><p class="eyebrow">GET TO KNOW THE ISLAND</p><h1>Tentang Gili Trawangan</h1></div>
+    </div>
+    <section class="section">
+      <div class="about-feature">
+        <img src="assets/Foto/foto1.jpg" alt="Pantai Gili">
+        <div class="about-feature-text">
+          <p class="eyebrow">THE ISLAND STORY</p>
+          <h2>Surga Tropis di Utara Lombok</h2>
+          <p>Gili Trawangan adalah pulau terbesar dari tiga Gili yang terkenal di lepas pantai barat laut Lombok. Pulau ini menjadi tujuan wisata bagi pengunjung yang ingin menikmati pantai, laut, dan suasana pulau.</p>
+          <p>Keindahan alamnya dapat dinikmati melalui berbagai aktivitas, baik di darat maupun di laut. Pengunjung juga dapat menemukan beragam pilihan tempat makan dan penginapan.</p>
+        </div>
+      </div>
+      <div class="facts-grid">
+        <article><i class="fa-solid fa-location-dot"></i><h3>Lokasi</h3><p>Kecamatan Pemenang, Kabupaten Lombok Utara, NTB.</p></article>
+        <article><i class="fa-solid fa-water"></i><h3>Wisata Bahari</h3><p>Pantai, snorkeling, dan pengalaman menikmati laut.</p></article>
+        <article><i class="fa-solid fa-bicycle"></i><h3>Jelajah Pulau</h3><p>Menikmati suasana pulau dengan berjalan kaki atau bersepeda.</p></article>
+      </div>
+    </section>
+  </section>
+
+  <!-- AKTIVITAS -->
+  <section class="page" id="activitiesPage" hidden>
+    <div class="page-heading">
+      <button class="back-button" data-back aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><p class="eyebrow">EXPLORE YOUR INTEREST</p><h1>Aktivitas Wisata</h1></div>
+    </div>
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">CHOOSE YOUR EXPERIENCE</p>
+        <h2>Jelajahi Setiap Pengalaman</h2>
+        <p>Tekan kartu untuk membaca informasi lebih lengkap.</p>
+      </div>
+      <div class="activity-grid">
+        <button class="activity-card" data-activity="snorkeling"><img src="assets/Foto/foto5.jpg" alt="Snorkeling"><span class="activity-number">01</span><div class="card-content"><small>UNDERWATER ADVENTURE</small><h3>Snorkeling</h3><span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div></button>
+        <button class="activity-card" data-activity="cycling"><img src="assets/Foto/foto4.jpg" alt="Bersepeda"><span class="activity-number">02</span><div class="card-content"><small>ISLAND RIDE</small><h3>Bersepeda</h3><span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div></button>
+        <button class="activity-card" data-activity="stay"><img src="assets/Foto/foto23.jpg" alt="Penginapan"><span class="activity-number">03</span><div class="card-content"><small>STAY & RELAX</small><h3>Penginapan</h3><span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div></button>
+        <button class="activity-card" data-activity="sunset"><img src="assets/Foto/foto22.jpeg" alt="Sunset"><span class="activity-number">04</span><div class="card-content"><small>GOLDEN HOUR</small><h3>Menikmati Sunset</h3><span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div></button>
+        <button class="activity-card" data-activity="horse"><img src="assets/Foto/foto18.jpg" alt="Berkuda"><span class="activity-number">05</span><div class="card-content"><small>BEACH HORSE RIDING</small><h3>Berkuda</h3><span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div></button>
+        <button class="activity-card" data-activity="paddle"><img src="assets/Foto/foto10.jpeg" alt="Paddleboarding"><span class="activity-number">06</span><div class="card-content"><small>OCEAN ADVENTURE</small><h3>Paddleboarding</h3><span>Lihat detail <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div></button>
+    </section>
+  </section>
+
+  <!-- GALERI -->
+  <section class="page" id="galleryPage" hidden>
+    <div class="page-heading">
+      <button class="back-button" data-back aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><p class="eyebrow">MOMENTS & MEMORIES</p><h1>Galeri Foto dan Video</h1></div>
+    </div>
+    <section class="section">
+      <div class="section-heading"><p class="eyebrow">VISUAL JOURNEY</p><h2>Galeri Gili Trawangan</h2><p>Tekan foto untuk memperbesar dan putar video untuk melihat dokumentasi.</p></div>
+      <div class="gallery-full-grid" id="galleryFullGrid"></div>
+      <p class="gallery-help">Tambahkan foto dengan nama foto-01.jpg sampai foto-20.jpg ke folder assets/Foto.</p>
+    </section>
+  </section>
+
+  <!-- LOKASI -->
+  <section class="page" id="locationPage" hidden>
+    <div class="page-heading">
+      <button class="back-button" data-back aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><p class="eyebrow">FIND YOUR WAY</p><h1>Lokasi Gili Trawangan</h1></div>
+    </div>
+    <section class="section location-content">
+      <div class="location-copy">
+        <p class="eyebrow">NORTH LOMBOK · WEST NUSA TENGGARA</p>
+        <h2>Temukan Lokasi Pulau</h2>
+        <p>Gili Trawangan berada di Kecamatan Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Barat. Peta berikut menggunakan tampilan satelit agar area pulau dan garis pantainya terlihat lebih jelas.</p>
+        <a class="gold-button" href="https://www.google.com/maps/search/?api=1&query=Gili+Trawangan" target="_blank" rel="noopener">Buka di Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <div class="map-frame">
+        <iframe title="Peta satelit Gili Trawangan" src="https://maps.google.com/maps?q=Gili%20Trawangan&t=k&z=15&output=embed" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </section>
+  </section>
+
+  <!-- PEMESANAN -->
+  <section class="page" id="bookingPage" hidden>
+    <div class="page-heading">
+      <button class="back-button" data-back aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><p class="eyebrow">PLAN YOUR ISLAND ESCAPE</p><h1>Pemesanan Wisata</h1></div>
+    </div>
+
+    <section class="section booking-layout">
+      <div class="booking-intro">
+        <p class="eyebrow">MAKE IT MEMORABLE</p>
+        <h2>Mulai Rencanakan Perjalananmu</h2>
+        <p>Lengkapi informasi pemesanan di bawah ini. Setelah formulir dikirim, kamu dapat menyimpan bukti pemesanan.</p>
+        <div class="booking-note"><i class="fa-solid fa-circle-info"></i><span>Website ini merupakan prototipe pemesanan untuk keperluan proyek multimedia. Pemesanan belum terhubung dengan penyedia layanan wisata.</span></div>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <input type="hidden" id="editingBookingId">
+
+        <h3>Informasi Pemesan</h3>
+        <div class="form-grid">
+          <label>Nama lengkap<input id="customerName" required placeholder="Nama sesuai identitas"></label>
+          <label>Email<input id="customerEmail" type="email" required placeholder="nama@email.com"></label>
+          <label>Nomor WhatsApp<input id="customerPhone" type="tel" required placeholder="08xxxxxxxxxx"></label>
+          <label>Jenis identitas<select id="identityType"><option>KTP</option><option>Paspor</option><option>SIM</option></select></label>
+          <label>Nomor identitas<input id="identityNumber" required placeholder="Nomor identitas"></label>
+          <label>Asal kota / negara<input id="customerCity" required placeholder="Contoh: Mataram"></label>
+        </div>
+
+        <h3>Detail Perjalanan</h3>
+        <div class="form-grid">
+          <label>Tanggal kunjungan<input id="visitDate" type="date" required></label>
+          <label>Jumlah peserta<input id="guestCount" type="number" min="1" value="1" required></label>
+          <label>Aktivitas
+            <select id="bookingActivity">
+              <option>Snorkeling</option>
+              <option>Bersepeda</option>
+              <option>Penginapan</option>
+              <option>Menikmati Sunset</option>
+              <option>Berkuda</option>
+              <option>Paddleboarding</option>
+              <option>Kayak</option>
+              <option>Wisata umum</option>
+            </select>
+          </label>
+          <label>Durasi<select id="duration"><option>1 hari</option><option>2 hari 1 malam</option><option>3 hari 2 malam</option><option>4 hari atau lebih</option></select></label>
+          <label>Titik keberangkatan<input id="departure" placeholder="Contoh: Pelabuhan Bangsal"></label>
+          <label>Perkiraan waktu tiba<input id="arrivalTime" type="time"></label>
+        </div>
+
+        <label class="full-label">Catatan tambahan<textarea id="bookingNote" rows="4" placeholder="Permintaan khusus atau informasi tambahan"></textarea></label>
+
+        <div class="form-buttons">
+          <button type="submit" class="gold-button submit-booking" id="saveBookingButton">Simpan Pemesanan <i class="fa-solid fa-arrow-right"></i></button>
+          <button type="button" class="outline-button" id="cancelEditButton" hidden>Batal Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- DAFTAR DATA PEMESANAN / CRUD -->
+    <section class="section booking-management">
+      <div class="section-heading">
+        <p class="eyebrow">BOOKING MANAGEMENT</p>
+        <h2>Data Pemesanan</h2>
+        <p>Kelola data pemesan yang tersimpan pada browser ini.</p>
+      </div>
+
+      <div class="booking-table-wrap">
+        <table class="booking-table">
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Nama Pemesan</th>
+              <th>Tanggal</th>
+              <th>Aktivitas</th>
+              <th>Peserta</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="bookingTableBody">
+            <tr><td colspan="6" class="empty-booking">Belum ada data pemesanan.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section receipt-section" id="receiptSection" hidden>
+      <div class="receipt-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <div><h2>Bukti Pemesanan</h2><p>Data pemesanan dapat diunduh sebagai dokumen PDF atau Word.</p></div>
+      </div>
+      <div id="receiptPreview" class="receipt-paper"></div>
+      <div class="receipt-actions">
+  <button class="gold-button" id="downloadPDF">
+    <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+  </button>
+
+  <button class="outline-button" id="downloadWord">
+    <i class="fa-solid fa-file-word"></i> Unduh Word
+  </button>
+</div>
+    </section>
+  </section>
+
+  <!-- DETAIL AKTIVITAS -->
+  <section class="page" id="detailPage" hidden>
+    <div class="page-heading">
+      <button class="back-button" id="detailBack" aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></button>
+      <div><p class="eyebrow">EXPLORE GILI / EXPERIENCE</p><h1 id="detailHeading">Detail Wisata</h1></div>
+    </div>
+    <div id="detailContent"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="brand footer-logo" id="footerLogo">
+        <span class="turtle-logo">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M21 25 13 18 8 20 12 32 21 34 M43 25 51 18 56 20 52 32 43 34 M22 42 16 49 19 54 29 46 M42 42 48 49 45 54 35 46" fill="currentColor"/>
+            <ellipse cx="32" cy="33" rx="17" ry="14" fill="currentColor"/>
+            <path d="M21 29 Q32 15 43 29 L43 37 Q32 50 21 37Z" fill="none" stroke="#f5f1e8" stroke-width="2"/>
+            <path d="M32 20 V46 M21 33 H43" stroke="#f5f1e8" stroke-width="1.5"/>
+            <circle cx="32" cy="13" r="6" fill="currentColor"/>
+            <circle cx="30" cy="12" r="1" fill="#fff"/>
+          </svg>
+        </span>
+        <span>EXPLORE <b>GILI</b><small>TRAWANGAN · INDONESIA</small></span>
+      </a>
+      <p>Temukan keindahan alam dan pengalaman wisata di Gili Trawangan.</p>
+    </div>
+    <div><h3>Jelajahi</h3><button data-go="aboutPage">Tentang Pulau</button><button data-go="activitiesPage">Aktivitas Wisata</button><button data-go="galleryPage">Galeri</button></div>
+    <div><h3>Informasi</h3><button data-go="locationPage">Lokasi</button><button data-go="bookingPage">Pemesanan</button></div>
+    <div><h3>Media Sosial</h3><a href="https://instagram.com/" target="_blank">Instagram</a><a href="https://tiktok.com/" target="_blank">TikTok</a><a href="mailto:exploregili@example.com">Email</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Explore Gili Trawangan</span><span>Discover the Beauty of Gili Islands</span></div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button id="lightboxClose" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightboxImage" src="" alt="">
+  <p id="lightboxCaption"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
